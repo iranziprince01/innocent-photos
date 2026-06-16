@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Innocent Photos
 
-## Getting Started
+Professional photography portfolio and booking website for **Innocent Photos**, serving clients across the USA.
 
-First, run the development server:
+Live-quality marketing site with portfolio showcase, service pages, pricing, contact options, and a booking form that delivers inquiries by email.
+
+## Features
+
+- **Home** — cinematic hero, featured work, services, testimonials, and calls to action
+- **Portfolio** — masonry gallery, category filters, fullscreen lightbox
+- **About** — photographer introduction, story, and philosophy
+- **Pricing** — clear package cards with starting rates
+- **Book** — validated inquiry form with Gmail delivery
+- **Contact** — phone, WhatsApp, email, Instagram, and map
+- **Shop** — apparel preview with coming-soon signup
+- **SEO** — metadata, Open Graph, sitemap, robots.txt, JSON-LD
+- **Motion** — scroll reveals, page transitions, and subtle section graphics
+
+## Tech stack
+
+| Layer | Tools |
+| --- | --- |
+| Framework | [Next.js 16](https://nextjs.org) (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| UI | shadcn/ui, Lucide icons |
+| Forms | React Hook Form, Zod |
+| Email | Nodemailer (Gmail SMTP) |
+| Animation | Framer Motion |
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Install and run
 
 ```bash
+git clone https://github.com/iranziprince01/innocent-photos.git
+cd innocent-photos
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create `.env.local` from `.env.example`:
 
-## Learn More
+```env
+GMAIL_USER=your@gmail.com
+GMAIL_APP_PASSWORD=your_gmail_app_password
+BOOKING_INBOX=your@gmail.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+Use a [Gmail App Password](https://myaccount.google.com/apppasswords) (requires 2-Step Verification). Never commit `.env.local`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For production, add the same variables in your hosting dashboard (e.g. Vercel → Settings → Environment Variables).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm start` | Run production server |
+| `npm run lint` | Run ESLint |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/              # Routes and API (booking email)
+├── components/       # UI, layout, home, portfolio, booking
+├── data/             # Business copy, services, pricing, images
+├── lib/              # SEO, motion, email, utilities
+└── types/            # Shared TypeScript types
+
+public/               # Logos, favicons, service photography
+```
+
+## Deployment
+
+Optimized for [Vercel](https://vercel.com):
+
+1. Push this repository to GitHub
+2. Import the project in Vercel
+3. Add `GMAIL_USER`, `GMAIL_APP_PASSWORD`, and `BOOKING_INBOX`
+4. Deploy
+
+```bash
+npm run build
+```
+
+## Brand
+
+| | |
+| --- | --- |
+| **Business** | Innocent Photos |
+| **Photographer** | Bahati Innocent |
+| **Location** | Tallahassee, Florida, USA |
+| **Phone** | +1 (850) 300-1264 |
+| **Email** | bahaticent@gmail.com |
+| **Instagram** | [@innocent_photographer01](https://www.instagram.com/innocent_photographer01) |
+
+## License
+
+Private project. All rights reserved.
