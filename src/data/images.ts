@@ -1,5 +1,5 @@
 import { SERVICE_IMAGES } from "@/data/services";
-import { PHOTOS, unsplashPhoto } from "@/lib/placeholders";
+import { PUBLIC_IMAGES } from "@/lib/placeholders";
 
 export const images = {
   hero: {
@@ -33,13 +33,13 @@ export const images = {
       alt: "Family photography session",
     },
     shop: {
-      src: unsplashPhoto(PHOTOS.hoodie, 2400, 1200),
-      alt: "Innocent Photos apparel preview",
+      src: PUBLIC_IMAGES.shopBanner,
+      alt: "Innocent Photos merchandise and apparel",
     },
   },
   about: {
-    portrait: unsplashPhoto(PHOTOS.photographer, 900, 1100),
+    portrait: PUBLIC_IMAGES.bio,
     story: SERVICE_IMAGES.wildlife,
   },
-  cta: unsplashPhoto(PHOTOS.coupleCta, 2400, 1200),
+  cta: SERVICE_IMAGES.weddings,
 } as const;

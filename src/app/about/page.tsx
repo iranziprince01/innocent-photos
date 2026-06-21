@@ -9,7 +9,7 @@ import { AboutPhilosophy } from "@/components/about/AboutPhilosophy";
 export const metadata: Metadata = createMetadata({
   title: "About",
   description:
-    "Meet Bahati Innocent, a photographer based in the USA who focuses on honest, natural images.",
+    "Meet Bahati Innocent, photographer and founder of Innocent Photos in Tallahassee, Florida. Honest, natural wedding, portrait, and family photography.",
   path: "/about",
 });
 
@@ -18,8 +18,9 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About"
-        subtitle="The person behind the lens."
+        subtitle="Photographer, storyteller, and founder of Innocent Photos in Tallahassee, Florida."
         image={images.pages.about.src}
+        imageAlt={images.pages.about.alt}
       />
 
       <AboutIntro />

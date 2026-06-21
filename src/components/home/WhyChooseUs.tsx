@@ -54,7 +54,7 @@ const cardThemes = [
 
 export function WhyChooseUs() {
   return (
-    <section className="relative section-padding overflow-hidden bg-white">
+    <section className="relative section-padding section-bg-warm overflow-hidden">
       <SectionBackground tone="gold" variant="mixed" />
       <div className="container-page relative">
         <SectionHeading
@@ -67,7 +67,7 @@ export function WhyChooseUs() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={stagger}
-          className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="section-stack grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10"
         >
           {whyChooseItems.map((item, index) => {
             const Icon = iconMap[item.icon] ?? Heart;
@@ -84,8 +84,8 @@ export function WhyChooseUs() {
                 >
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-display text-xl text-charcoal">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-warm-gray">
+                <h3 className="font-display text-lg text-charcoal sm:text-xl">{item.title}</h3>
+                <p className="body-text-sm mt-3 text-warm-gray">
                   {item.description}
                 </p>
               </motion.div>

@@ -2,6 +2,17 @@
 
 import { usePathname } from "next/navigation";
 import { PageCta } from "@/components/layout/PageCta";
+import { cn } from "@/lib/utils";
+
+/** CTA background contrasts with the last section on each page */
+const CTA_BACKGROUND: Record<string, string> = {
+  "/": "section-bg-soft",
+  "/about": "section-bg-light",
+  "/portfolio": "section-bg-soft",
+  "/pricing": "section-bg-light",
+  "/book": "section-bg-soft",
+  "/shop": "section-bg-light",
+};
 
 export function SiteCta() {
   const pathname = usePathname();
@@ -10,7 +21,5 @@ export function SiteCta() {
     return null;
   }
 
-  const backgroundClass = pathname === "/portfolio" ? "bg-ivory" : undefined;
-
-  return <PageCta className={backgroundClass} />;
+  return <PageCta className={cn(CTA_BACKGROUND[pathname] ?? "section-bg-soft")} />;
 }

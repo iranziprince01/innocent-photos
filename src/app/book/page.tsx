@@ -7,7 +7,7 @@ import { images } from "@/data/images";
 export const metadata: Metadata = createMetadata({
   title: "Book a Session",
   description:
-    "Book your photography session with Innocent Photos. WhatsApp for quick booking, or submit the inquiry form. USA.",
+    "Book wedding, portrait, family, or event photography with Innocent Photos in Tallahassee, Florida. WhatsApp for quick booking or use the inquiry form.",
   path: "/book",
 });
 
@@ -18,6 +18,7 @@ export default function BookPage() {
         title="Book a Session"
         subtitle="Tell us about your date, location, and what you need."
         image={images.pages.book.src}
+        imageAlt={images.pages.book.alt}
       />
       <BookPageBody />
     </>

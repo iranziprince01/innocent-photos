@@ -4,8 +4,9 @@ import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "Shop",
-  description: "Innocent Photos apparel and merchandise, coming soon.",
+  description: "Innocent Photos merchandise and apparel. Coming soon.",
   path: "/shop",
+  noIndex: true,
 });
 
 export default function ShopPage() {

@@ -11,7 +11,7 @@ export const whyChooseItems: WhyChooseItem[] = [
     id: "w2",
     icon: "Camera",
     title: "Professional Quality",
-    description: "Professional photography with careful editing.",
+    description: "Professional photography with careful editing and consistent results.",
   },
   {
     id: "w3",
@@ -22,19 +22,19 @@ export const whyChooseItems: WhyChooseItem[] = [
   {
     id: "w4",
     icon: "MapPin",
-    title: "Based in the USA",
-    description: "Serving clients across the USA.",
+    title: "Tallahassee & Beyond",
+    description: "Based in Tallahassee, Florida, with sessions available across the USA.",
   },
   {
     id: "w5",
     icon: "Sparkles",
     title: "Warm Experience",
-    description: "Sessions that feel relaxed, guided, and easy.",
+    description: "Sessions that feel relaxed, guided, and easy from start to finish.",
   },
   {
     id: "w6",
     icon: "Shield",
     title: "Trusted & Professional",
-    description: "Consistent communication from inquiry to final gallery.",
+    description: "Clear communication from inquiry through your final gallery.",
   },
 ];

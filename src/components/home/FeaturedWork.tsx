@@ -12,7 +12,7 @@ import { fadeUp, stagger } from "@/lib/motion";
 
 export function FeaturedWork() {
   return (
-    <section id="featured" className="relative section-padding overflow-hidden bg-white">
+    <section id="featured" className="relative section-padding section-bg-light overflow-hidden">
       <SectionBackground tone="light" variant="lines" />
       <div className="container-page relative">
         <SectionHeading eyebrow="Featured Work" title="Moments worth remembering" />
@@ -22,7 +22,7 @@ export function FeaturedWork() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={stagger}
-          className="masonry-grid mt-14"
+          className="masonry-grid section-stack"
         >
           {featuredImages.map((image) => (
             <motion.div key={image.id} variants={fadeUp} className="masonry-item">
@@ -37,7 +37,7 @@ export function FeaturedWork() {
           ))}
         </motion.div>
 
-        <Reveal className="mt-14 text-center">
+        <Reveal className="section-stack text-center">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
             <Link
               href="/portfolio"

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import { BRAND_ASSETS } from "@/data/brand";
@@ -22,13 +21,15 @@ export function Logo({
       className={cn("group inline-flex shrink-0 items-center", className)}
       aria-label={`${BUSINESS.name}, home`}
     >
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={src}
         alt={BUSINESS.name}
-        width={280}
-        height={112}
-        priority={priority}
-        className="h-12 w-auto transition-opacity duration-300 group-hover:opacity-85 sm:h-14 md:h-16"
+        width={160}
+        height={64}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        className="h-8 w-auto max-w-[min(100%,160px)] object-contain object-left transition-opacity duration-300 group-hover:opacity-85 sm:h-9 md:h-10"
       />
     </Link>
   );

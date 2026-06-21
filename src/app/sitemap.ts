@@ -1,13 +1,22 @@
 import type { MetadataRoute } from "next";
 import { BUSINESS } from "@/data/business";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/portfolio", "/about", "/pricing", "/book", "/contact", "/shop"];
+const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
+  { path: "", priority: 1, changeFrequency: "weekly" },
+  { path: "/portfolio", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/book", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/about", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/contact", priority: 0.7, changeFrequency: "monthly" },
+];
 
-  return routes.map((route) => ({
-    url: `${BUSINESS.siteUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date("2026-06-15");
+
+  return routes.map(({ path, priority, changeFrequency }) => ({
+    url: `${BUSINESS.siteUrl}${path}`,
+    lastModified,
+    changeFrequency,
+    priority,
   }));
 }

@@ -3,7 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SiteCta } from "@/components/layout/SiteCta";
-import { createMetadata, localBusinessJsonLd } from "@/lib/seo";
+import { createMetadata, siteJsonLd } from "@/lib/seo";
 import { BUSINESS } from "@/data/business";
 import "./globals.css";
 
@@ -32,26 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable} h-full`} data-scroll-behavior="smooth">
-      <head>
-        <link
-          rel="icon"
-          href="/favicon2.png"
-          type="image/png"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          href="/favicon.png"
-          type="image/png"
-          sizes="32x32"
-          media="(prefers-color-scheme: dark)"
-        />
-      </head>
       <body className="min-h-full flex flex-col font-sans antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd()),
+            __html: JSON.stringify(siteJsonLd()),
           }}
         />
         <Header />

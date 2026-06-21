@@ -8,7 +8,7 @@ import { images } from "@/data/images";
 export const metadata: Metadata = createMetadata({
   title: "Contact",
   description:
-    "Get in touch with Innocent Photos by phone, email, WhatsApp, or Instagram.",
+    "Contact Innocent Photos in Tallahassee, Florida by phone, email, WhatsApp, or Instagram. We respond within 24 hours.",
   path: "/contact",
 });
 
@@ -19,9 +19,10 @@ export default function ContactPage() {
         title="Contact"
         subtitle="We'd love to hear from you."
         image={images.pages.contact.src}
+        imageAlt={images.pages.contact.alt}
       />
       <ContactPageBody />
-      <PageCta className="bg-ivory" />
+      <PageCta className="section-bg-light" />
     </>
   );
 }

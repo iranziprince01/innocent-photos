@@ -31,15 +31,12 @@ export function SectionHeading({
       )}
       <motion.h2
         variants={fadeUp}
-        className="font-display text-3xl font-medium leading-tight text-charcoal sm:text-4xl md:text-5xl text-balance"
+        className="section-title font-medium text-charcoal text-balance"
       >
         {title}
       </motion.h2>
       {description && (
-        <motion.p
-          variants={fadeUp}
-          className="mt-4 text-base leading-relaxed text-warm-gray sm:text-lg"
-        >
+        <motion.p variants={fadeUp} className="body-text mt-5 text-warm-gray">
           {description}
         </motion.p>
       )}
@@ -60,14 +57,8 @@ export function SectionHeading({
             {eyebrow}
           </p>
         )}
-        <h2 className="font-display text-3xl font-medium leading-tight text-charcoal sm:text-4xl md:text-5xl text-balance">
-          {title}
-        </h2>
-        {description && (
-          <p className="mt-4 text-base leading-relaxed text-warm-gray sm:text-lg">
-            {description}
-          </p>
-        )}
+        <h2 className="section-title font-medium text-charcoal text-balance">{title}</h2>
+        {description && <p className="body-text mt-5 text-warm-gray">{description}</p>}
       </div>
     );
   }

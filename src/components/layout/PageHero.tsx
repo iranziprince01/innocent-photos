@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { SectionBackground } from "@/components/motion/SectionBackground";
+import { IMAGE_SIZES } from "@/lib/images";
 import { ease, fadeUp, stagger } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
@@ -10,11 +11,13 @@ export function PageHero({
   title,
   subtitle,
   image,
+  imageAlt,
   className,
 }: {
   title: string;
   subtitle?: string;
   image?: string;
+  imageAlt?: string;
   className?: string;
 }) {
   const reduceMotion = useReducedMotion();
@@ -22,7 +25,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative flex min-h-[40vh] items-end overflow-hidden bg-charcoal pt-28",
+        "relative flex min-h-[44vh] items-end overflow-hidden bg-charcoal pt-28 sm:min-h-[48vh]",
         className
       )}
     >
@@ -36,11 +39,13 @@ export function PageHero({
           >
             <Image
               src={image}
-              alt=""
+              alt={imageAlt ?? `${title} — Innocent Photos`}
               fill
-              className="object-cover opacity-40"
-              sizes="100vw"
               priority
+              fetchPriority="high"
+              decoding="async"
+              className="object-cover opacity-40"
+              sizes={IMAGE_SIZES.pageHero}
             />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
@@ -53,18 +58,15 @@ export function PageHero({
         variants={stagger}
         initial="hidden"
         animate="visible"
-        className="container-page relative pb-16 pt-8"
+        className="container-page relative pb-20 pt-10 md:pb-24"
       >
-        <motion.h1
-          variants={fadeUp}
-          className="font-display text-4xl font-medium text-white sm:text-5xl md:text-6xl"
-        >
+        <motion.h1 variants={fadeUp} className="page-title font-medium text-white">
           {title}
         </motion.h1>
         {subtitle && (
           <motion.p
             variants={fadeUp}
-            className="mt-4 max-w-xl text-base text-white/70"
+            className="body-text mt-5 max-w-xl text-white/75 sm:max-w-2xl"
           >
             {subtitle}
           </motion.p>

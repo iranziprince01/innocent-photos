@@ -3,10 +3,14 @@ import { BUSINESS } from "@/data/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+    ],
     sitemap: `${BUSINESS.siteUrl}/sitemap.xml`,
+    host: BUSINESS.siteUrl,
   };
 }

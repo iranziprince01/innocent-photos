@@ -15,17 +15,15 @@ function packagePrice(startingAt: string) {
 
 export function PricingCards() {
   return (
-    <section className="relative section-padding overflow-hidden bg-ivory">
+    <section className="relative section-padding section-bg-soft overflow-hidden">
       <SectionBackground tone="gold" variant="rings" />
       <div className="container-page relative">
-        <Reveal className="mx-auto mb-14 max-w-2xl text-center">
+        <Reveal className="mx-auto mb-16 max-w-2xl text-center md:mb-20">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
             Packages
           </p>
-          <h2 className="mt-3 font-display text-3xl text-charcoal sm:text-4xl text-balance">
-            Clear starting rates
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-warm-gray">
+          <h2 className="section-title mt-3 text-charcoal text-balance">Clear starting rates</h2>
+          <p className="body-text mt-5 text-warm-gray">
             Every session is tailored to you. These are starting points, and we&apos;ll shape the
             details together.
           </p>

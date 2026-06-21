@@ -8,13 +8,14 @@ import { SectionBackground } from "@/components/motion/SectionBackground";
 import { Reveal } from "@/components/motion/Reveal";
 import { Separator } from "@/components/ui/separator";
 import { images } from "@/data/images";
+import { IMAGE_SIZES } from "@/lib/images";
 import { fadeLeft, fadeRight } from "@/lib/motion";
 
 export function BookPageBody() {
   const panel = images.pages.bookPanel;
 
   return (
-    <section className="relative section-padding overflow-hidden bg-white">
+    <section className="relative section-padding section-bg-light overflow-hidden">
       <SectionBackground tone="ivory" variant="grid" />
       <div className="container-page relative">
         <div className="relative mb-10 aspect-[5/3] w-full overflow-hidden lg:hidden">
@@ -22,9 +23,10 @@ export function BookPageBody() {
             src={panel.src}
             alt={panel.alt}
             fill
+            loading="lazy"
+            decoding="async"
             className="object-cover"
-            sizes="100vw"
-            priority
+            sizes={IMAGE_SIZES.bookPanelMobile}
           />
         </div>
 
@@ -72,9 +74,10 @@ export function BookPageBody() {
                 src={panel.src}
                 alt={panel.alt}
                 fill
+                loading="lazy"
+                decoding="async"
                 className="object-cover object-center"
-                sizes="(max-width: 1024px) 0vw, 45vw"
-                priority
+                sizes={IMAGE_SIZES.bookPanelDesktop}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/25 via-transparent to-transparent" />
             </div>

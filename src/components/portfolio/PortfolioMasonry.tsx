@@ -10,6 +10,7 @@ import {
 import { PortfolioFilter } from "./PortfolioFilter";
 import { PortfolioLightbox } from "./PortfolioLightbox";
 import type { PortfolioCategory } from "@/types";
+import { IMAGE_SIZES } from "@/lib/images";
 import { fadeUp, stagger } from "@/lib/motion";
 
 export function PortfolioMasonry() {
@@ -47,16 +48,18 @@ export function PortfolioMasonry() {
             whileHover={{ y: -4 }}
             transition={{ duration: 0.25 }}
             onClick={() => setLightboxIndex(index)}
+            aria-label={`View ${image.alt}`}
             className="masonry-item group relative w-full overflow-hidden rounded-sm text-left"
           >
             <Image
               src={image.src}
               alt={image.alt}
-              width={image.width}
-              height={image.height}
+              width={Math.min(image.width, 1200)}
+              height={Math.min(image.height, 1600)}
               className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes={IMAGE_SIZES.masonry}
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/25" />
             <span className="absolute bottom-4 left-4 text-xs font-semibold uppercase tracking-[0.15em] text-white opacity-0 transition-opacity group-hover:opacity-100">

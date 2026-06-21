@@ -9,7 +9,7 @@ import { fadeUp, stagger } from "@/lib/motion";
 
 export function ServicesSnapshot() {
   return (
-    <section className="relative section-padding overflow-hidden bg-ivory">
+    <section className="relative section-padding section-bg-soft overflow-hidden">
       <SectionBackground tone="ivory" variant="aperture" />
       <div className="container-page relative">
         <SectionHeading
@@ -22,7 +22,7 @@ export function ServicesSnapshot() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={stagger}
-          className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="section-stack grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8"
         >
           {services.map((service) => (
             <motion.div key={service.id} variants={fadeUp}>

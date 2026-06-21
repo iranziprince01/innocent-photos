@@ -7,7 +7,7 @@ import { images } from "@/data/images";
 export const metadata: Metadata = createMetadata({
   title: "Pricing",
   description:
-    "Premium photography packages for portraits, families, events, and weddings. Starting rates by Innocent Photos.",
+    "Photography packages for portraits, families, events, and weddings by Innocent Photos in Tallahassee, Florida. Transparent starting rates.",
   path: "/pricing",
 });
 
@@ -18,6 +18,7 @@ export default function PricingPage() {
         title="Pricing"
         subtitle="Starting rates for portraits, families, events, and weddings."
         image={images.pages.pricing.src}
+        imageAlt={images.pages.pricing.alt}
       />
       <PricingCards />
     </>

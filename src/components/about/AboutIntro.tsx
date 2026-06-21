@@ -3,23 +3,25 @@
 import Image from "next/image";
 import { BUSINESS } from "@/data/business";
 import { images } from "@/data/images";
+import { IMAGE_SIZES } from "@/lib/images";
 import { Reveal, StaggerItem, StaggerReveal } from "@/components/motion/Reveal";
 import { SectionBackground } from "@/components/motion/SectionBackground";
 
 export function AboutIntro() {
   return (
-    <section className="relative section-padding overflow-hidden bg-white">
+    <section className="relative section-padding section-bg-light overflow-hidden">
       <SectionBackground tone="ivory" variant="aperture" />
-      <div className="container-page relative grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="container-page relative grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
         <Reveal variant="left">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
             <Image
               src={images.about.portrait}
-              alt={`${BUSINESS.photographer}, photographer`}
+              alt={`Portrait of ${BUSINESS.photographer}, photographer at Innocent Photos`}
               fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
               priority
+              decoding="async"
+              className="object-cover object-top"
+              sizes={IMAGE_SIZES.portrait}
             />
           </div>
         </Reveal>
@@ -31,12 +33,12 @@ export function AboutIntro() {
             </p>
           </StaggerItem>
           <StaggerItem>
-            <h2 className="mt-4 font-display text-3xl text-charcoal sm:text-4xl">
+            <h2 className="section-title mt-4 text-charcoal">
               Hi, I&apos;m Innocent
             </h2>
           </StaggerItem>
           <StaggerItem>
-            <div className="mt-6 space-y-4 text-justify text-base leading-relaxed text-warm-gray">
+            <div className="body-text mt-6 space-y-5 text-warm-gray">
               <p>
                 Bahati Innocent is the photographer behind Innocent Photos. What started as a love
                 for capturing everyday moments turned into a career helping people hold onto the

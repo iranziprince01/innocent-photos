@@ -2,10 +2,13 @@ export const BUSINESS = {
   name: "Innocent Photos",
   tagline: "Photography & Portraits",
   photographer: "Bahati Innocent",
-  location: "USA",
+  location: "Tallahassee, Florida",
+  streetAddress: "2301 Old Bainbridge Rd",
+  city: "Tallahassee",
+  state: "FL",
+  postalCode: "32303",
+  country: "US",
   address: "2301 Old Bainbridge Rd, Tallahassee, Florida 32303",
-  city: "USA",
-  state: "USA",
   phone: "+1 (850) 300-1264",
   phoneRaw: "18503001264",
   email: "bahaticent@gmail.com",
@@ -18,7 +21,7 @@ export const BUSINESS = {
     { lead: "Creating Timeless ", accent: "Memories.", direction: "ltr" as const },
   ] as const,
   heroSubheadline:
-    "Photography for weddings, families, graduates, events, and the moments that matter.",
+    "Wedding, portrait, family, and event photography in Tallahassee and across the USA.",
 } as const;
 
 const whatsappBookingMessage = `Hi ${BUSINESS.name}! I'd like to book a photography session. Could you share your availability?`;

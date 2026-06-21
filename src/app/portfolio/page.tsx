@@ -7,7 +7,7 @@ import { images } from "@/data/images";
 export const metadata: Metadata = createMetadata({
   title: "Portfolio",
   description:
-    "Explore wedding, portrait, family, event, and lifestyle photography by Innocent Photos in the USA.",
+    "Browse wedding, portrait, family, event, sports, and lifestyle photography by Innocent Photos. Based in Tallahassee, Florida, serving clients across the USA.",
   path: "/portfolio",
 });
 
@@ -16,8 +16,9 @@ export default function PortfolioPage() {
     <>
       <PageHero
         title="Portfolio"
-        subtitle="Weddings, portraits, families, and events from across the USA."
+        subtitle="Weddings, portraits, families, events, and more from Innocent Photos."
         image={images.pages.portfolio.src}
+        imageAlt={images.pages.portfolio.alt}
       />
       <PortfolioPageSection />
     </>

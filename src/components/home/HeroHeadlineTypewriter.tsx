@@ -82,7 +82,7 @@ function TypewriterBox({
 
   if (!hasStarted) {
     return (
-      <span className="mt-2 block min-h-[1.2em] sm:mt-3" aria-hidden />
+      <span className="mt-1.5 block min-h-[1.1em] sm:mt-2" aria-hidden />
     );
   }
 
@@ -92,7 +92,7 @@ function TypewriterBox({
       initial={{ opacity: 0, y: 6, scale: 0.985 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.55, ease }}
-      className="mt-2 inline-flex items-center leading-none border border-white/95 bg-white/98 px-3 py-1 shadow-[0_4px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(255,255,255,0.6)_inset] sm:mt-3"
+      className="hero-headline-box mt-1.5 inline-flex max-w-full items-center leading-none border border-white/95 bg-white/98 shadow-[0_4px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(255,255,255,0.6)_inset] sm:mt-2"
     >
       {cursorBefore && <TypingCursor visible side="left" />}
       {chars.map((char, index) => {
@@ -233,14 +233,14 @@ export function HeroHeadlineTypewriter({
       initial={{ opacity: 0, y: 28 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.35, duration: 0.9, ease }}
-      className="mx-auto max-w-5xl font-display text-4xl font-bold leading-[1.18] tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+      className="hero-headline mx-auto w-full max-w-[18ch] px-2 font-display font-bold tracking-tight text-white text-balance drop-shadow-[0_2px_24px_rgba(0,0,0,0.45)] sm:max-w-[20ch] md:max-w-[22ch] lg:max-w-none"
     >
       {BUSINESS.heroHeadlineLines.map((line, lineIndex) => {
         const leadVisible =
           lineIndex === 0 || momentsComplete || prefersReducedMotion;
 
         return (
-          <span key={line.accent} className="mb-2 block last:mb-0 sm:mb-3">
+          <span key={line.accent} className="mb-1.5 block last:mb-0 sm:mb-2">
             <motion.span
               initial={{ opacity: 0, y: 14 }}
               animate={leadVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}

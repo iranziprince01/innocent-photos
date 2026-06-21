@@ -8,6 +8,7 @@ import { SectionBackground } from "@/components/motion/SectionBackground";
 import { Reveal, StaggerItem, StaggerReveal } from "@/components/motion/Reveal";
 import { shopItems } from "@/data/shop";
 import { images } from "@/data/images";
+import { IMAGE_SIZES } from "@/lib/images";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -27,9 +28,10 @@ export function ShopContent() {
         title="Shop"
         subtitle="Innocent Photos apparel, coming soon."
         image={images.pages.shop.src}
+        imageAlt={images.pages.shop.alt}
       />
 
-      <section className="relative section-padding overflow-hidden bg-white">
+      <section className="relative section-padding section-bg-soft overflow-hidden">
         <SectionBackground tone="ivory" variant="lines" />
         <div className="container-page relative">
           <Reveal className="mx-auto max-w-2xl text-center">
@@ -47,8 +49,8 @@ export function ShopContent() {
             </p>
           </Reveal>
 
-          <StaggerReveal className="mt-16 grid gap-8 sm:grid-cols-3">
-            {shopItems.map((item) => (
+          <StaggerReveal className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {shopItems.map((item, index) => (
               <StaggerItem key={item.id}>
                 <motion.article
                   whileHover={{ y: -6 }}
@@ -58,10 +60,13 @@ export function ShopContent() {
                   <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-ivory">
                     <Image
                       src={item.image}
-                      alt={`${item.name} mockup`}
+                      alt={`${item.name} merchandise preview`}
                       fill
+                      priority={index === 0}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      decoding="async"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      sizes={IMAGE_SIZES.shopCard}
                     />
                   </div>
                   <p className="mt-4 font-display text-lg text-charcoal">{item.name}</p>

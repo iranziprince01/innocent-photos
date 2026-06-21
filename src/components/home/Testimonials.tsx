@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { IMAGE_SIZES } from "@/lib/images";
 import { SectionBackground } from "@/components/motion/SectionBackground";
 import { fadeUp, stagger } from "@/lib/motion";
 
 export function Testimonials() {
   return (
-    <section className="relative section-padding overflow-hidden bg-ivory">
+    <section className="relative section-padding section-bg-light overflow-hidden">
       <SectionBackground tone="gold" variant="grid" />
       <div className="container-page relative">
         <SectionHeading eyebrow="Testimonials" title="Messages from our clients" />
@@ -20,7 +21,7 @@ export function Testimonials() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={stagger}
-          className="mt-14 grid gap-6 md:grid-cols-2"
+          className="section-stack grid gap-6 md:grid-cols-2 md:gap-8"
         >
           {testimonials.map((item) => (
             <motion.article
@@ -32,10 +33,12 @@ export function Testimonials() {
               <div className="relative w-[30%] shrink-0">
                 <Image
                   src={item.image}
-                  alt={item.name}
+                  alt={`${item.service} photography — ${item.name}`}
                   fill
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover"
-                  sizes="(max-width: 768px) 30vw, 15vw"
+                  sizes={IMAGE_SIZES.testimonial}
                 />
               </div>
               <div className="flex w-[70%] flex-col justify-center p-5 sm:p-6">
@@ -44,7 +47,7 @@ export function Testimonials() {
                     <Star key={i} className="h-3.5 w-3.5 fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="text-sm leading-relaxed text-charcoal">
+                <p className="body-text-sm text-charcoal sm:text-base">
                   &ldquo;{item.quote}&rdquo;
                 </p>
                 <p className="mt-3 font-display text-lg text-charcoal">{item.name}</p>

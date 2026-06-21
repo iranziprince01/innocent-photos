@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
+  --font-heading: var(--font-playfair);
   --color-ivory: #faf8f5;
   --color-charcoal: #1a1814;
   --color-warm-gray: #6b6560;
@@ -108,10 +109,43 @@
     @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
   }
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-24 md:py-32 lg:py-36;
+  }
+  .section-bg-light {
+    @apply bg-white;
+  }
+  .section-bg-soft {
+    @apply bg-ivory;
+  }
+  .section-bg-warm {
+    @apply bg-gold-bright/30;
+  }
+  .section-stack {
+    @apply mt-16 md:mt-20 lg:mt-24;
+  }
+  .section-title {
+    font-size: clamp(1.75rem, 1.15rem + 1.75vw, 3rem);
+    line-height: 1.15;
+  }
+  .page-title {
+    font-size: clamp(2rem, 1.2rem + 2.75vw, 3.75rem);
+    line-height: 1.1;
+  }
+  .body-text {
+    @apply text-base leading-relaxed sm:text-[1.0625rem] sm:leading-relaxed;
+  }
+  .body-text-sm {
+    @apply text-sm leading-relaxed sm:text-[0.9375rem];
   }
   .text-balance {
     text-wrap: balance;
+  }
+  .hero-headline {
+    font-size: clamp(1.875rem, 1rem + 2.65vw, 3.75rem);
+    line-height: 1.12;
+  }
+  .hero-headline-box {
+    padding: clamp(0.2rem, 0.35vw, 0.45rem) clamp(0.55rem, 1.2vw, 1rem);
   }
   .masonry-grid {
     column-count: 1;

@@ -3,8 +3,18 @@
  * Replace with local files in /public/images/ later — update IDs/paths here only.
  */
 
+import { clampDimension } from "@/lib/images";
+
 export function unsplashPhoto(photoId: string, width: number, height: number) {
-  return `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=${width}&h=${height}&q=80`;
+  const w = clampDimension(width);
+  const h = clampDimension(height, 1600);
+  return `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=${w}&h=${h}&q=75`;
+}
+
+export function pexelsPhoto(photoId: number, width: number, height: number) {
+  const w = clampDimension(width);
+  const h = clampDimension(height, 1600);
+  return `https://images.pexels.com/photos/${photoId}/pexels-photo-${photoId}.jpeg?auto=compress&cs=tinysrgb&w=${w}&h=${h}&fit=crop`;
 }
 
 export function unsplashSquare(photoId: string, size = 600) {
@@ -45,12 +55,33 @@ export const PHOTOS = {
   hoodie: "photo-1556821840-3a63f95609a7",
   tee: "photo-1521572163474-6864f9cf17ab",
   cap: "photo-1588850561407-ed78c282e89b",
+  sweatshirt: "photo-1434389677669-e08b4cac3105",
+  tote: "photo-1544816155-12df9643f363",
 } as const;
 
-/** Bump when replacing files in /public to bust Next.js image cache */
-const PUBLIC_IMAGE_VERSION = "3";
-
-/** Local assets in /public — swap files in place, then bump PUBLIC_IMAGE_VERSION */
+/** Local assets in /public — swap files in place without code changes */
 export const PUBLIC_IMAGES = {
-  portraits: `/portraits.jpg?v=${PUBLIC_IMAGE_VERSION}`,
+  portraits: "/portraits.jpg",
+  bio: "/Bio.jpeg",
+  portrait1: "/portrait1.JPG",
+  portrait2: "/portrait2.JPG",
+  portrait3: "/portrait3.JPG",
+  portrait4: "/portrait4.JPG",
+  portrait5: "/portrait5.JPG",
+  portrait6: "/portrait6.JPG",
+  portrait7: "/portrait7.JPG",
+  portrait8: "/portrait8.JPG",
+  portrait9: "/portrait9.JPG",
+  event1: "/event1.JPG",
+  family1: "/family1.JPG",
+  family2: "/family2.JPG",
+  family3: "/family3.JPG",
+  testimonialWedding: "/wedding.jpg",
+  testimonialFamily: "/family2.JPG",
+  testimonialGraduation: "/Test_grad.jpg",
+  testimonialRealEstate: "/Test_restate.jpg",
+  shopSweatshirt: "/Sweatshirt.jpg",
+  shopTote: "/bag.jpg",
+  shopLongSleeveShirt: "/long_sleeve_shirt.jpg",
+  shopBanner: "/shop.jpg",
 } as const;

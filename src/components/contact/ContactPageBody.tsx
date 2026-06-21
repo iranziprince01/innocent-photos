@@ -6,7 +6,7 @@ import { ContactInfo } from "@/components/contact/ContactInfo";
 
 export function ContactPageBody() {
   return (
-    <section className="relative section-padding overflow-hidden bg-white">
+    <section className="relative section-padding section-bg-soft overflow-hidden">
       <SectionBackground tone="ivory" variant="grid" />
       <div className="container-page relative max-w-4xl space-y-10">
         <WhatsAppQuickBooking />

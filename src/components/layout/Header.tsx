@@ -58,7 +58,7 @@ function NavItem({
       href={link.href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group relative inline-flex flex-col items-center pb-3 text-sm font-bold tracking-wide transition-colors sm:text-[15px]",
+        "group relative inline-flex items-center text-sm font-bold tracking-wide transition-colors sm:text-[15px]",
         transparent
           ? "text-white/85 hover:text-white"
           : "text-charcoal hover:text-gold",
@@ -69,7 +69,7 @@ function NavItem({
       <span
         aria-hidden
         className={cn(
-          "mt-2 block transition-all duration-300",
+          "absolute -bottom-1.5 left-1/2 block -translate-x-1/2 transition-all duration-300",
           active
             ? "h-[2px] w-5 rounded-full bg-gold"
             : "h-[2px] w-0 rounded-full bg-gold/0 group-hover:w-3 group-hover:bg-gold/40"
@@ -103,10 +103,10 @@ export function Header() {
           : "border-b border-border/60 bg-white/95 backdrop-blur-md"
       )}
     >
-      <div className="container-page flex h-24 items-center justify-between">
+      <div className="container-page flex h-16 items-center justify-between gap-4">
         <Logo variant={transparent ? "light" : "dark"} priority />
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden h-full items-center gap-7 lg:flex">
           {navLinks.map((link) => (
             <NavItem
               key={link.href}
@@ -117,11 +117,11 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex h-full items-center gap-2 sm:gap-3">
           <Button
             asChild
             className={cn(
-              "hidden rounded-full px-6 text-sm font-bold sm:inline-flex",
+              "hidden h-9 rounded-full px-5 text-sm font-bold sm:inline-flex",
               transparent
                 ? "bg-white text-charcoal hover:bg-white/90"
                 : "bg-gold text-white hover:bg-gold-light",
@@ -140,7 +140,7 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 className={cn(
-                  "lg:hidden",
+                  "size-9 lg:hidden",
                   transparent ? "text-white hover:bg-white/10" : "text-charcoal"
                 )}
                 aria-label="Open menu"

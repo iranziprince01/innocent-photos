@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X, ZoomIn, ZoomOut } from "lucide-react";
 import { useKeyboardNavigation } from "@/hooks/use-keyboard-navigation";
 import type { PortfolioImage } from "@/types";
+import { IMAGE_SIZES } from "@/lib/images";
 import { Button } from "@/components/ui/button";
 
 type Props = {
@@ -126,11 +127,12 @@ export function PortfolioLightbox({ images, initialIndex, onClose }: Props) {
             <Image
               src={current.src}
               alt={current.alt}
-              width={current.width}
-              height={current.height}
+              width={Math.min(current.width, 1600)}
+              height={Math.min(current.height, 2000)}
               className="max-h-[80vh] w-auto object-contain"
-              sizes="100vw"
+              sizes={IMAGE_SIZES.lightbox}
               priority
+              decoding="async"
             />
           </div>
         </motion.div>
