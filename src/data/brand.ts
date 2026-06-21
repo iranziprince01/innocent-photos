@@ -8,5 +8,5 @@ export const BRAND_ASSETS = {
   logoColor: withVersion("/logo_color.svg"),
   favicon: withVersion("/favicon.png"),
   faviconLight: withVersion("/favicon2.png"),
-  ogImage: "/wedding.jpg",
+  ogImage: "/opengraph-image",
 } as const;
