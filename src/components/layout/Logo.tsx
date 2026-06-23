@@ -25,11 +25,11 @@ export function Logo({
       <img
         src={src}
         alt={BUSINESS.name}
-        width={160}
-        height={64}
+        width={176}
+        height={70}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        className="h-8 w-auto max-w-[min(100%,160px)] object-contain object-left transition-opacity duration-300 group-hover:opacity-85 sm:h-9 md:h-10"
+        className="h-9 w-auto max-w-[min(100%,176px)] object-contain object-left transition-opacity duration-300 group-hover:opacity-85 sm:h-10 md:h-11"
       />
     </Link>
   );

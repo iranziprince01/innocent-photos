@@ -24,31 +24,34 @@ const iconMap: Record<string, LucideIcon> = {
   Shield,
 };
 
-/** Subtle card tints — all within brand palette */
+/** Card surface + icon accents — white base lifts off warm section bg */
+const cardBase =
+  "border bg-white shadow-[0_2px_16px_rgba(26,24,20,0.08)] ring-1 ring-black/[0.03]";
+
 const cardThemes = [
   {
-    card: "border-border/80 bg-ivory",
-    icon: "bg-gold/[0.08] text-gold",
+    card: `${cardBase} border-border/90`,
+    icon: "bg-gold/12 text-gold",
   },
   {
-    card: "border-gold-bright/50 bg-gold-bright/25",
-    icon: "bg-white text-gold",
+    card: `${cardBase} border-gold/30`,
+    icon: "bg-gold-bright/70 text-gold",
   },
   {
-    card: "border-border bg-white shadow-sm",
-    icon: "bg-gold-light/10 text-gold-light",
+    card: `${cardBase} border-border`,
+    icon: "bg-gold-light/15 text-gold",
   },
   {
-    card: "border-gold-light/25 bg-gold-light/[0.07]",
-    icon: "bg-white text-gold",
+    card: `${cardBase} border-gold-light/35`,
+    icon: "bg-gold-bright/55 text-gold",
   },
   {
-    card: "border-charcoal/10 bg-charcoal/[0.03]",
-    icon: "bg-ivory text-gold-light",
+    card: `${cardBase} border-charcoal/15`,
+    icon: "bg-ivory text-gold ring-1 ring-border/80",
   },
   {
-    card: "border-gold/20 bg-ivory",
-    icon: "bg-gold-bright/35 text-gold",
+    card: `${cardBase} border-gold/25`,
+    icon: "bg-gold-bright/65 text-gold",
   },
 ] as const;
 
@@ -85,7 +88,7 @@ export function WhyChooseUs() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-lg text-charcoal sm:text-xl">{item.title}</h3>
-                <p className="body-text-sm mt-3 text-warm-gray">
+                <p className="body-text-sm mt-3 text-warm-gray/95">
                   {item.description}
                 </p>
               </motion.div>

@@ -7,9 +7,10 @@ export const sitePages = [
   { href: "/shop", label: "Shop" },
 ] as const;
 
-/** Footer-only links (booking is a primary action, not in header nav) */
-export const footerPages = [
-  ...sitePages.slice(0, 3),
+/** Footer quick links — core actions only */
+export const footerQuickLinks = [
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/book", label: "Book a Session" },
-  ...sitePages.slice(3),
+  { href: "/contact", label: "Contact" },
 ] as const;

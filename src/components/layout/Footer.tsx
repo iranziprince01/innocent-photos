@@ -1,27 +1,13 @@
 import Link from "next/link";
-import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/instagram-icon";
 import { BUSINESS, LINKS } from "@/data/business";
-import { footerPages } from "@/data/navigation";
+import { footerQuickLinks } from "@/data/navigation";
 import { services } from "@/data/services";
 import { Logo } from "./Logo";
 import { Separator } from "@/components/ui/separator";
 
 const contactLinks = [
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    value: "Message on WhatsApp",
-    href: LINKS.whatsappBook,
-    external: true,
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: BUSINESS.phone,
-    href: LINKS.phone,
-    external: false,
-  },
   {
     icon: Mail,
     label: "Email",
@@ -40,7 +26,7 @@ const contactLinks = [
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
+    <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-white">
       {children}
     </h3>
   );
@@ -56,7 +42,7 @@ function FooterLink({
   external?: boolean;
 }) {
   const className =
-    "text-sm text-white/70 transition-colors hover:text-white";
+    "text-sm text-white/85 transition-colors hover:text-gold-bright";
 
   if (external) {
     return (
@@ -80,23 +66,32 @@ function FooterLink({
 
 export function Footer() {
   return (
-    <footer className="bg-gold text-white">
+    <footer className="border-t border-gold-light/25 bg-gold text-white">
       <div className="container-page py-14 md:py-16 lg:py-20">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="sm:col-span-2 lg:col-span-4">
             <Logo variant="light" />
-            <p className="mt-4 font-display text-lg text-white">
-              {BUSINESS.tagline}
-            </p>
-            <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/70">
-              {BUSINESS.heroSubheadline} Serving clients across the USA.
-            </p>
+            <div className="mt-5 max-w-sm border-t border-white/20 pt-5">
+              <p className="text-sm leading-relaxed text-white/85">
+                Wedding, portrait, family, and event photography crafted with care.
+                Based in {BUSINESS.location}, serving clients across the USA.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-white/85">
+                <Link
+                  href="/book"
+                  className="font-semibold text-white underline decoration-white/40 underline-offset-[3px] transition-colors hover:text-gold-bright hover:decoration-gold-bright"
+                >
+                  Book your session
+                </Link>{" "}
+                and start planning images you&apos;ll keep for a lifetime.
+              </p>
+            </div>
           </div>
 
           <div className="lg:col-span-2">
-            <FooterHeading>Pages</FooterHeading>
+            <FooterHeading>Quick Links</FooterHeading>
             <ul className="mt-4 space-y-2.5">
-              {footerPages.map((link) => (
+              {footerQuickLinks.map((link) => (
                 <li key={link.href}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
                 </li>
@@ -118,21 +113,36 @@ export function Footer() {
           <div className="lg:col-span-3">
             <FooterHeading>Contact</FooterHeading>
             <ul className="mt-4 space-y-3">
+              <li>
+                <a
+                  href={LINKS.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-start gap-3 text-sm text-white/85 transition-colors hover:text-gold-bright"
+                >
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-bright" />
+                  <span>{BUSINESS.address}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={LINKS.phone}
+                  className="group inline-flex items-center gap-3 text-sm text-white/85 transition-colors hover:text-gold-bright"
+                >
+                  <Phone className="h-4 w-4 shrink-0 text-gold-bright" />
+                  <span>{BUSINESS.phone}</span>
+                </a>
+              </li>
               {contactLinks.map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noopener noreferrer" : undefined}
-                    className="group inline-flex items-start gap-3 text-sm text-white/70 transition-colors hover:text-white"
+                    className="group inline-flex items-center gap-3 text-sm text-white/85 transition-colors hover:text-gold-bright"
                   >
-                    <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-white/90" />
-                    <span>
-                      <span className="block text-[10px] font-semibold uppercase tracking-wider text-white/50 group-hover:text-white/70">
-                        {item.label}
-                      </span>
-                      {item.value}
-                    </span>
+                    <item.icon className="h-4 w-4 shrink-0 text-gold-bright" />
+                    <span>{item.value}</span>
                   </a>
                 </li>
               ))}
@@ -140,9 +150,9 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-10 bg-white/15" />
+        <Separator className="my-10 bg-white/20" />
 
-        <p className="text-center text-xs text-white/60">
+        <p className="text-center text-xs text-white/75">
           © {new Date().getFullYear()} {BUSINESS.name}. All rights reserved.
         </p>
       </div>

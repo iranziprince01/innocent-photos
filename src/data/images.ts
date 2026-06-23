@@ -9,16 +9,16 @@ export const images = {
   /** Page banner backgrounds — local photos matched to each page */
   pages: {
     about: {
-      src: SERVICE_IMAGES.portraits,
-      alt: "Portrait photography by Innocent Photos",
+      src: PUBLIC_IMAGES.bannerAbout,
+      alt: "About Innocent Photos",
     },
     portfolio: {
-      src: SERVICE_IMAGES.events,
-      alt: "Event and celebration photography",
+      src: PUBLIC_IMAGES.bannerPortfolio,
+      alt: "Portfolio photography by Innocent Photos",
     },
     pricing: {
-      src: SERVICE_IMAGES.family,
-      alt: "Family photography session outdoors",
+      src: PUBLIC_IMAGES.bannerPricing,
+      alt: "Photography pricing and packages",
     },
     book: {
       src: SERVICE_IMAGES.weddings,
@@ -29,8 +29,8 @@ export const images = {
       alt: "Portrait session by Innocent Photos",
     },
     contact: {
-      src: SERVICE_IMAGES.family,
-      alt: "Family photography session",
+      src: PUBLIC_IMAGES.bannerContact,
+      alt: "Contact Innocent Photos",
     },
     shop: {
       src: PUBLIC_IMAGES.shopBanner,

@@ -32,7 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable} h-full`} data-scroll-behavior="smooth">
-      <body className="min-h-full flex flex-col font-sans antialiased">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col font-sans antialiased"
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -40,7 +40,7 @@ export function AboutPhilosophy() {
             <StaggerItem key={pillar.title} className="list-none">
               <motion.div
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
-                className="rounded-sm border border-border/70 bg-white p-8 shadow-sm"
+                className="rounded-sm border border-border bg-white p-8 shadow-[0_2px_16px_rgba(26,24,20,0.08)] ring-1 ring-black/[0.03]"
               >
                 <h3 className="font-display text-xl text-charcoal">{pillar.title}</h3>
                 <p className="body-text-sm mt-3 text-warm-gray">{pillar.text}</p>

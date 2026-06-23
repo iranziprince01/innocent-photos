@@ -18,7 +18,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About"
-        subtitle="Photographer, storyteller, and founder of Innocent Photos in Tallahassee, Florida."
+        subtitle="Photographer, storyteller, and founder of Innocent Photos."
         image={images.pages.about.src}
         imageAlt={images.pages.about.alt}
       />

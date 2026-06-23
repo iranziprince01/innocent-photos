@@ -44,11 +44,12 @@ export function PageHero({
               priority
               fetchPriority="high"
               decoding="async"
-              className="object-cover opacity-40"
+              className="object-cover opacity-50"
               sizes={IMAGE_SIZES.pageHero}
             />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30" />
+          <div className="absolute inset-0 bg-charcoal/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/85 to-charcoal/55" />
         </>
       )}
 
@@ -66,7 +67,7 @@ export function PageHero({
         {subtitle && (
           <motion.p
             variants={fadeUp}
-            className="body-text mt-5 max-w-xl text-white/75 sm:max-w-2xl"
+            className="body-text mt-5 max-w-xl text-white/90 sm:max-w-2xl"
           >
             {subtitle}
           </motion.p>

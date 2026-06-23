@@ -31,6 +31,7 @@ export function Hero() {
           fill
           priority
           fetchPriority="high"
+          loading="eager"
           decoding="async"
           className="object-cover object-center"
           sizes={IMAGE_SIZES.hero}

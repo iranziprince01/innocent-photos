@@ -84,4 +84,8 @@ export const PUBLIC_IMAGES = {
   shopTote: "/bag.jpg",
   shopLongSleeveShirt: "/long_sleeve_shirt.jpg",
   shopBanner: "/shop.jpg",
+  bannerAbout: "/about.jpg",
+  bannerPortfolio: "/Portfolio.jpg",
+  bannerPricing: "/price.jpg",
+  bannerContact: "/contact.jpg",
 } as const;
