@@ -12,6 +12,7 @@ export interface PortfolioImage {
   src: string;
   category: PortfolioCategory;
   alt: string;
+  seoFilename?: string;
   width: number;
   height: number;
   featured?: boolean;

@@ -4,7 +4,7 @@ import { PUBLIC_IMAGES } from "@/lib/placeholders";
 export const images = {
   hero: {
     src: SERVICE_IMAGES.weddings,
-    alt: "Bride and groom in golden hour light",
+    alt: "Wedding photographer USA — bride and groom in golden hour light",
   },
   /** Page banner backgrounds — local photos matched to each page */
   pages: {
@@ -14,7 +14,7 @@ export const images = {
     },
     portfolio: {
       src: PUBLIC_IMAGES.bannerPortfolio,
-      alt: "Portfolio photography by Innocent Photos",
+      alt: "Portfolio — wedding and portrait photography USA and Canada",
     },
     book: {
       src: SERVICE_IMAGES.weddings,

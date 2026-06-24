@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 export const metadata = createMetadata({
   title: "Page Not Found",
   description: "The page you are looking for could not be found. Return to Innocent Photos.",
-  path: "/404",
   noIndex: true,
+  skipCanonical: true,
 });
 
 export default function NotFound() {

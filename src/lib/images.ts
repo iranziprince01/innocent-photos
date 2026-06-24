@@ -9,6 +9,7 @@ export const IMAGE_SIZES = {
   bookPanelDesktop: "(max-width: 1024px) 0vw, 45vw",
   testimonial: "(max-width: 768px) 30vw, 140px",
   shopCard: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw",
+  card: "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw",
   lightbox: "(max-width: 1280px) 95vw, 1200px",
 } as const;
 

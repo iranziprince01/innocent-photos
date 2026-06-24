@@ -21,7 +21,14 @@ export const BUSINESS = {
     { lead: "Creating Timeless ", accent: "Memories.", direction: "ltr" as const },
   ] as const,
   heroSubheadline:
-    "Wedding, portrait, family, and event photography in Tallahassee and across the USA.",
+    "Professional wedding, portrait, and event photography for clients in the United States, Canada, and worldwide — with travel shoots from Kigali to North America.",
+  internationalTagline:
+    "Professional photographer serving US and Canada clients remotely, with on-location travel shoots worldwide.",
+  serviceAreas: [
+    { type: "city" as const, name: "Kigali", country: "Rwanda" },
+    { type: "country" as const, name: "United States" },
+    { type: "country" as const, name: "Canada" },
+  ],
 } as const;
 
 const whatsappBookingMessage = `Hi ${BUSINESS.name}! I'd like to book a photography session. Could you share your availability?`;

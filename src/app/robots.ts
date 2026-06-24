@@ -7,10 +7,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/shop"],
       },
     ],
     sitemap: `${BUSINESS.siteUrl}/sitemap.xml`,
-    host: BUSINESS.siteUrl,
+    host: BUSINESS.siteUrl.replace(/^https?:\/\//, ""),
   };
 }

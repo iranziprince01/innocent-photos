@@ -7,8 +7,9 @@ import { images } from "@/data/images";
 export const metadata: Metadata = createMetadata({
   title: "Book a Session",
   description:
-    "Book wedding, portrait, family, or event photography with Innocent Photos in Tallahassee, Florida. WhatsApp for quick booking or use the inquiry form.",
+    "Book wedding, portrait, or event photography with Innocent Photos. Serving US, Canada, and international clients — WhatsApp or inquiry form.",
   path: "/book",
+  keywords: ["book photographer USA", "book photographer Canada", "hire photographer"],
 });
 
 export default function BookPage() {
