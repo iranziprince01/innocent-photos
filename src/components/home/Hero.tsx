@@ -48,7 +48,7 @@ export function Hero() {
 
           {/* Invisible spacer matches old button block so vertical centering keeps headline fixed */}
           <div
-            className="pointer-events-none invisible mt-8 h-11 sm:mt-10 sm:h-12 md:mt-14 md:h-14"
+            className="pointer-events-none invisible mt-8 h-24 sm:mt-10 sm:h-12 md:mt-14 md:h-14"
             aria-hidden
           />
 
@@ -56,7 +56,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8, ease }}
-            className="absolute inset-x-0 top-full mt-[clamp(2.75rem,7vh,5rem)] flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="absolute inset-x-0 top-full mt-[clamp(2.75rem,7vh,5rem)] flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
           >
             <Button
               asChild

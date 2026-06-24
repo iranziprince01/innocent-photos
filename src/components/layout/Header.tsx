@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
@@ -25,13 +25,11 @@ function isActiveNav(pathname: string, href: string) {
 function NavItem({
   link,
   pathname,
-  transparent,
   onNavigate,
   mobile = false,
 }: {
   link: { href: string; label: string };
   pathname: string;
-  transparent: boolean;
   onNavigate?: () => void;
   mobile?: boolean;
 }) {
@@ -58,11 +56,8 @@ function NavItem({
       href={link.href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group relative inline-flex items-center text-sm font-bold tracking-wide transition-colors sm:text-[15px]",
-        transparent
-          ? "text-white/85 hover:text-white"
-          : "text-charcoal hover:text-gold",
-        active && (transparent ? "text-white" : "text-gold")
+        "group relative inline-flex items-center text-sm font-bold tracking-wide text-charcoal transition-colors hover:text-gold sm:text-[15px]",
+        active && "text-gold"
       )}
     >
       {link.label}
@@ -81,39 +76,16 @@ function NavItem({
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const transparent = isHome && !scrolled;
-
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        transparent
-          ? "bg-transparent"
-          : "border-b border-border/60 bg-white/95 backdrop-blur-md"
-      )}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-white/95 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between gap-4">
-        <Logo variant={transparent ? "light" : "dark"} priority />
+        <Logo variant="dark" priority />
 
         <nav className="hidden h-full items-center gap-7 lg:flex">
           {navLinks.map((link) => (
-            <NavItem
-              key={link.href}
-              link={link}
-              pathname={pathname}
-              transparent={transparent}
-            />
+            <NavItem key={link.href} link={link} pathname={pathname} />
           ))}
         </nav>
 
@@ -121,14 +93,8 @@ export function Header() {
           <Button
             asChild
             className={cn(
-              "hidden h-9 rounded-full px-5 text-sm font-bold sm:inline-flex",
-              transparent
-                ? "bg-white text-charcoal hover:bg-white/90"
-                : "bg-gold text-white hover:bg-gold-light",
-              pathname === "/book" &&
-                (transparent
-                  ? "ring-2 ring-gold ring-offset-2 ring-offset-transparent"
-                  : "ring-2 ring-charcoal/15 ring-offset-2 ring-offset-white")
+              "hidden h-9 rounded-full bg-gold px-5 text-sm font-bold text-white hover:bg-gold-light sm:inline-flex",
+              pathname === "/book" && "ring-2 ring-charcoal/15 ring-offset-2 ring-offset-white"
             )}
           >
             <Link href="/book">Book Session</Link>
@@ -139,10 +105,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={cn(
-                  "size-9 lg:hidden",
-                  transparent ? "text-white hover:bg-white/10" : "text-charcoal"
-                )}
+                className="size-9 text-charcoal lg:hidden"
                 aria-label="Open menu"
               >
                 <Menu className="h-5 w-5" />
@@ -160,7 +123,6 @@ export function Header() {
                     key={link.href}
                     link={link}
                     pathname={pathname}
-                    transparent={false}
                     mobile
                     onNavigate={() => setOpen(false)}
                   />
