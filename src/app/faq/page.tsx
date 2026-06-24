@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
-import { PageCta } from "@/components/layout/PageCta";
 import { ALL_FAQ } from "@/data/faq";
 import { breadcrumbJsonLd, createMetadata, faqJsonLd } from "@/lib/seo";
-import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = createMetadata({
   title: "FAQ",
@@ -62,17 +60,8 @@ export default function FaqPage() {
               </div>
             ))}
           </dl>
-          <div className="mt-12 text-center">
-            <Button
-              asChild
-              className="rounded-full bg-gold px-8 text-white hover:bg-gold-light"
-            >
-              <Link href="/book">Book a Session</Link>
-            </Button>
-          </div>
         </div>
       </section>
-      <PageCta />
     </>
   );
 }

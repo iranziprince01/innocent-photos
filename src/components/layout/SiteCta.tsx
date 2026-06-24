@@ -11,6 +11,7 @@ const CTA_BACKGROUND: Record<string, string> = {
   "/portfolio": "section-bg-soft",
   "/book": "section-bg-soft",
   "/shop": "section-bg-light",
+  "/faq": "section-bg-light",
 };
 
 export function SiteCta() {
