@@ -3,7 +3,6 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { InstagramIcon } from "@/components/ui/instagram-icon";
 import { BUSINESS, LINKS } from "@/data/business";
 import { footerQuickLinks } from "@/data/navigation";
-import { SEO_FOOTER_LINKS } from "@/data/seo-routes";
 import { services } from "@/data/services";
 import { Logo } from "./Logo";
 import { Separator } from "@/components/ui/separator";
@@ -100,9 +99,9 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <FooterHeading>Services</FooterHeading>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5">
               {services.map((service) => (
                 <li key={service.id}>
                   <FooterLink href="/book">{service.title}</FooterLink>
@@ -111,18 +110,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
-            <FooterHeading>US & Canada</FooterHeading>
-            <ul className="mt-4 space-y-2.5">
-              {SEO_FOOTER_LINKS.map((link) => (
-                <li key={link.href}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <FooterHeading>Contact</FooterHeading>
             <ul className="mt-4 space-y-3">
               <li>

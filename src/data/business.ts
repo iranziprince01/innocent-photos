@@ -11,7 +11,7 @@ export const BUSINESS = {
   address: "2301 Old Bainbridge Rd, Tallahassee, Florida 32303",
   phone: "+1 (850) 300-1264",
   phoneRaw: "18503001264",
-  email: "bahaticent@gmail.com",
+  email: "innocentphotos10@gmail.com",
   instagram: "https://www.instagram.com/innoc_photos",
   instagramHandle: "@innoc_photos",
   siteUrl: "https://innocentphotos.com",

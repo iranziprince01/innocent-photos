@@ -11,4 +11,6 @@ export const footerQuickLinks = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/book", label: "Book a Session" },
   { href: "/contact", label: "Contact" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/blog", label: "Blog" },
 ] as const;

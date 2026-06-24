@@ -27,13 +27,3 @@ export const INDEXABLE_ROUTES: SitemapEntry[] = [
     changeFrequency: "monthly" as const,
   })),
 ];
-
-export const SEO_FOOTER_LINKS = [
-  { href: "/photography/us", label: "Photography — USA" },
-  { href: "/photography/canada", label: "Photography — Canada" },
-  { href: "/wedding-photographer-us", label: "Wedding Photographer USA" },
-  { href: "/portrait-photographer-canada", label: "Portrait Photographer Canada" },
-  { href: "/event-photographer-us-canada", label: "Event Photographer US & Canada" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/blog", label: "Blog" },
-] as const;

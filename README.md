@@ -104,7 +104,7 @@ npm run build
 | **Photographer** | Bahati Innocent |
 | **Location** | Tallahassee, Florida, USA |
 | **Phone** | +1 (850) 300-1264 |
-| **Email** | bahaticent@gmail.com |
+| **Email** | innocentphotos10@gmail.com |
 | **Instagram** | [@innocent_photographer01](https://www.instagram.com/innocent_photographer01) |
 
 ## License
