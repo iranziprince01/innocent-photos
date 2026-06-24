@@ -76,21 +76,9 @@ export function createMetadata({
       },
     },
     icons: {
-      icon: [
-        { url: BRAND_ASSETS.faviconLight, type: "image/png" },
-        {
-          url: BRAND_ASSETS.faviconLight,
-          type: "image/png",
-          media: "(prefers-color-scheme: light)",
-        },
-        {
-          url: BRAND_ASSETS.favicon,
-          type: "image/png",
-          media: "(prefers-color-scheme: dark)",
-        },
-      ],
-      shortcut: BRAND_ASSETS.faviconLight,
-      apple: BRAND_ASSETS.faviconLight,
+      icon: [{ url: BRAND_ASSETS.favicon, type: "image/png" }],
+      shortcut: BRAND_ASSETS.favicon,
+      apple: BRAND_ASSETS.favicon,
     },
   };
 }
