@@ -17,7 +17,7 @@ export default function BookPage() {
     <>
       <PageHero
         title="Book a Session"
-        subtitle="Tell us about your date, location, and what you need."
+        subtitle="Tell us about your date, location, and what you need — US, Canada, and international clients welcome."
         image={images.pages.book.src}
         imageAlt={images.pages.book.alt}
       />

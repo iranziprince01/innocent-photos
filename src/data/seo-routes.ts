@@ -37,3 +37,33 @@ export const SEO_FOOTER_LINKS = [
   { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "Blog" },
 ] as const;
+
+/** Compact link sets for in-page context — keep labels short */
+export const SEO_CONTEXT = {
+  home: [
+    { href: "/photography/us", label: "USA" },
+    { href: "/photography/canada", label: "Canada" },
+    { href: "/blog", label: "Blog" },
+  ],
+  about: [
+    { href: "/photography/us", label: "USA services" },
+    { href: "/photography/canada", label: "Canada services" },
+    { href: "/faq", label: "FAQ" },
+  ],
+  portfolio: [
+    { href: "/wedding-photographer-us", label: "Weddings" },
+    { href: "/portrait-photographer-canada", label: "Portraits" },
+    { href: "/event-photographer-us-canada", label: "Events" },
+  ],
+  book: [
+    { href: "/wedding-photographer-us", label: "Wedding photography" },
+    { href: "/portrait-photographer-canada", label: "Portrait photography" },
+    { href: "/event-photographer-us-canada", label: "Event photography" },
+    { href: "/faq", label: "FAQ" },
+  ],
+  contact: [
+    { href: "/faq", label: "FAQ" },
+    { href: "/photography/us", label: "USA" },
+    { href: "/photography/canada", label: "Canada" },
+  ],
+} as const;
