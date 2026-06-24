@@ -6,8 +6,6 @@ import { ServicePhotoCard } from "@/components/services/ServicePhotoCard";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { SectionBackground } from "@/components/motion/SectionBackground";
 import { fadeUp, stagger } from "@/lib/motion";
-import { SeoContextLinks } from "@/components/seo/SeoContextLinks";
-import { SEO_CONTEXT } from "@/data/seo-routes";
 
 export function ServicesSnapshot() {
   return (
@@ -32,13 +30,6 @@ export function ServicesSnapshot() {
             </motion.div>
           ))}
         </motion.div>
-
-        <SeoContextLinks
-          links={SEO_CONTEXT.home}
-          prefix="Serving the United States and Canada —"
-          align="center"
-          className="mt-10"
-        />
       </div>
     </section>
   );

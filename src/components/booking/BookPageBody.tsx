@@ -8,8 +8,6 @@ import { SectionBackground } from "@/components/motion/SectionBackground";
 import { images } from "@/data/images";
 import { IMAGE_SIZES } from "@/lib/images";
 import { fadeLeft, fadeRight } from "@/lib/motion";
-import { SeoContextLinks } from "@/components/seo/SeoContextLinks";
-import { SEO_CONTEXT } from "@/data/seo-routes";
 
 export function BookPageBody() {
   const panel = images.pages.bookPanel;
@@ -50,12 +48,6 @@ export function BookPageBody() {
             >
               <BookingForm />
             </motion.div>
-
-            <SeoContextLinks
-              links={SEO_CONTEXT.book}
-              prefix="Booking from the US or Canada?"
-              className="border-t border-border/50 pt-6"
-            />
           </div>
 
           <motion.div

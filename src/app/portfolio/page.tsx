@@ -23,7 +23,7 @@ export default function PortfolioPage() {
       />
       <PageHero
         title="Portfolio"
-        subtitle="Weddings, portraits, families, and events — serving clients in the USA, Canada, and worldwide."
+        subtitle="Weddings, portraits, families, events, and more from Innocent Photos."
         image={images.pages.portfolio.src}
         imageAlt={images.pages.portfolio.alt}
       />

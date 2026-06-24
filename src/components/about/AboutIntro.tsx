@@ -6,8 +6,6 @@ import { images } from "@/data/images";
 import { IMAGE_SIZES } from "@/lib/images";
 import { Reveal, StaggerItem, StaggerReveal } from "@/components/motion/Reveal";
 import { SectionBackground } from "@/components/motion/SectionBackground";
-import { SeoContextLinks } from "@/components/seo/SeoContextLinks";
-import { SEO_CONTEXT } from "@/data/seo-routes";
 
 export function AboutIntro() {
   return (
@@ -56,18 +54,13 @@ export function AboutIntro() {
                 and little details that make your story yours.
               </p>
               <p>
-                He works with clients across the United States, Canada, and worldwide, and is happy
-                to talk through your session by phone, email, or WhatsApp before you ever meet.
+                He works with clients across the USA and is happy to talk through your session by
+                phone, email, or WhatsApp before you ever meet.
               </p>
               <p>
                 If you have a date in mind, or you are just starting to plan, he would love to hear
                 what you are looking for.
               </p>
-              <SeoContextLinks
-                links={SEO_CONTEXT.about}
-                prefix="Learn more:"
-                className="pt-2"
-              />
             </div>
           </StaggerItem>
         </StaggerReveal>
