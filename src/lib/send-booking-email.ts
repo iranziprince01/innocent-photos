@@ -1,6 +1,16 @@
 import nodemailer from "nodemailer";
 import type { BookingFormData } from "@/lib/booking-schema";
 
+const BRAND = {
+  gold: "#6f4428",
+  goldLight: "#a67b52",
+  goldBright: "#edd9b8",
+  charcoal: "#1a1814",
+  warmGray: "#6b6560",
+  ivory: "#faf8f5",
+  border: "#e8e4df",
+} as const;
+
 function getMailConfig() {
   const user = process.env.GMAIL_USER;
   const pass = process.env.GMAIL_APP_PASSWORD;
@@ -36,10 +46,12 @@ function buildEmailHtml(data: BookingFormData) {
     .map(
       ([label, value]) => `
         <tr>
-          <td style="padding:12px 16px;border-bottom:1px solid #e8e4df;color:#6b6560;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;width:140px;vertical-align:top;">
-            ${label}
+          <td style="padding:14px 0;border-bottom:1px solid ${BRAND.border};width:128px;vertical-align:top;">
+            <span style="display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:${BRAND.gold};">
+              ${label}
+            </span>
           </td>
-          <td style="padding:12px 16px;border-bottom:1px solid #e8e4df;color:#1a1814;font-size:15px;line-height:1.6;white-space:pre-wrap;">
+          <td style="padding:14px 0 14px 20px;border-bottom:1px solid ${BRAND.border};font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.65;color:${BRAND.charcoal};white-space:pre-wrap;">
             ${escapeHtml(value)}
           </td>
         </tr>`
@@ -47,21 +59,29 @@ function buildEmailHtml(data: BookingFormData) {
     .join("");
 
   return `
-    <div style="margin:0;padding:32px 16px;background:#faf8f5;font-family:Georgia,'Times New Roman',serif;">
-      <div style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #e8e4df;">
-        <div style="padding:28px 24px 20px;border-bottom:1px solid #e8e4df;">
-          <p style="margin:0 0 8px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#6f4428;">
+    <div style="margin:0;padding:40px 16px;background:${BRAND.ivory};">
+      <div style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid ${BRAND.border};border-radius:2px;overflow:hidden;">
+        <div style="height:4px;background:linear-gradient(90deg,${BRAND.gold},${BRAND.goldLight},${BRAND.goldBright});"></div>
+        <div style="padding:32px 28px 24px;">
+          <p style="margin:0 0 10px;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:${BRAND.gold};">
             Innocent Photos
           </p>
-          <h1 style="margin:0;font-size:28px;font-weight:500;color:#1a1814;">
+          <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:500;line-height:1.2;color:${BRAND.charcoal};">
             New booking inquiry
           </h1>
+          <p style="margin:12px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:${BRAND.warmGray};">
+            A new session request arrived from the website booking form.
+          </p>
         </div>
-        <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;">
-          ${bodyRows}
-        </table>
-        <div style="padding:18px 24px 24px;background:#faf8f5;color:#6b6560;font-size:12px;line-height:1.6;">
-          Sent from the Innocent Photos booking form.
+        <div style="padding:0 28px 8px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;">
+            ${bodyRows}
+          </table>
+        </div>
+        <div style="margin-top:8px;padding:20px 28px 28px;background:${BRAND.ivory};border-top:1px solid ${BRAND.border};">
+          <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.6;color:${BRAND.warmGray};">
+            Reply directly to this email to reach <strong style="color:${BRAND.charcoal};">${escapeHtml(data.fullName)}</strong>.
+          </p>
         </div>
       </div>
     </div>

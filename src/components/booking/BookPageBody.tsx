@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { BookingForm } from "@/components/booking/BookingForm";
 import { WhatsAppQuickBooking } from "@/components/booking/WhatsAppQuickBooking";
 import { SectionBackground } from "@/components/motion/SectionBackground";
-import { Reveal } from "@/components/motion/Reveal";
-import { Separator } from "@/components/ui/separator";
 import { images } from "@/data/images";
 import { IMAGE_SIZES } from "@/lib/images";
 import { fadeLeft, fadeRight } from "@/lib/motion";
@@ -30,8 +28,8 @@ export function BookPageBody() {
           />
         </div>
 
-        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-14 xl:gap-20">
-          <div className="w-full max-w-lg space-y-10 lg:max-w-none">
+        <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,32rem)_minmax(0,1fr)] lg:gap-14 xl:gap-20">
+          <div className="w-full max-w-lg space-y-8 lg:max-w-none">
             <motion.div
               variants={fadeLeft}
               initial="hidden"
@@ -40,16 +38,6 @@ export function BookPageBody() {
             >
               <WhatsAppQuickBooking />
             </motion.div>
-
-            <Reveal>
-              <div className="relative flex items-center gap-4">
-                <Separator className="flex-1" />
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-warm-gray">
-                  or send an inquiry
-                </span>
-                <Separator className="flex-1" />
-              </div>
-            </Reveal>
 
             <motion.div
               variants={fadeLeft}
