@@ -86,6 +86,5 @@ export const PUBLIC_IMAGES = {
   shopBanner: "/shop.jpg",
   bannerAbout: "/about.jpg",
   bannerPortfolio: "/Portfolio.jpg",
-  bannerPricing: "/price.jpg",
   bannerContact: "/contact.jpg",
 } as const;

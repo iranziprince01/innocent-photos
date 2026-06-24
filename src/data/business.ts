@@ -12,8 +12,8 @@ export const BUSINESS = {
   phone: "+1 (850) 300-1264",
   phoneRaw: "18503001264",
   email: "bahaticent@gmail.com",
-  instagram: "https://www.instagram.com/innocent_photographer01",
-  instagramHandle: "@innocent_photographer01",
+  instagram: "https://www.instagram.com/innoc_photos",
+  instagramHandle: "@innoc_photos",
   siteUrl: "https://innocentphotos.com",
   heroHeadline: "Capturing Real Moments. Creating Timeless Memories.",
   heroHeadlineLines: [

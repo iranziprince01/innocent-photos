@@ -9,7 +9,6 @@ const CTA_BACKGROUND: Record<string, string> = {
   "/": "section-bg-soft",
   "/about": "section-bg-light",
   "/portfolio": "section-bg-soft",
-  "/pricing": "section-bg-light",
   "/book": "section-bg-soft",
   "/shop": "section-bg-light",
 };

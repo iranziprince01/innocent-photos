@@ -33,15 +33,6 @@ export interface Testimonial {
   image: string;
 }
 
-export interface PricingPackage {
-  id: string;
-  title: string;
-  startingAt: string;
-  description: string;
-  features: string[];
-  highlighted?: boolean;
-}
-
 export interface WhyChooseItem {
   id: string;
   title: string;

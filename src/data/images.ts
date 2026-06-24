@@ -16,10 +16,6 @@ export const images = {
       src: PUBLIC_IMAGES.bannerPortfolio,
       alt: "Portfolio photography by Innocent Photos",
     },
-    pricing: {
-      src: PUBLIC_IMAGES.bannerPricing,
-      alt: "Photography pricing and packages",
-    },
     book: {
       src: SERVICE_IMAGES.weddings,
       alt: "Wedding photography session",
