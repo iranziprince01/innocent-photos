@@ -14,7 +14,7 @@ export const images = {
     },
     portfolio: {
       src: PUBLIC_IMAGES.bannerPortfolio,
-      alt: "Portfolio — wedding and portrait photography USA and Canada",
+      alt: "Portfolio — wedding and portrait photography across the USA",
     },
     book: {
       src: SERVICE_IMAGES.weddings,

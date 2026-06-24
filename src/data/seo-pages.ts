@@ -74,57 +74,6 @@ export const SEO_LANDING_PAGES: SeoLandingPageData[] = [
     ],
   },
   {
-    path: "/photography/canada",
-    metaTitle: "Photography Canada",
-    metaDescription:
-      "Wedding, portrait, and event photography for Canadian clients. Remote planning, travel shoots, and professional galleries. Book Innocent Photos.",
-    keywords: [
-      "photographer Canada",
-      "wedding photographer Canada",
-      "portrait photographer Canada",
-      "professional portrait photography Canada",
-      "event photographer Canada",
-      "photographer for hire USA Canada",
-    ],
-    heroTitle: "Photography Services in Canada",
-    heroSubtitle:
-      "Professional wedding, portrait, and event photography for Canadian clients — with remote planning and on-location travel.",
-    heroImage: PUBLIC_IMAGES.portraits,
-    heroImageAlt: "Portrait photographer Canada — Innocent Photos",
-    intro:
-      "Canadian couples and businesses choose Innocent Photos for natural, timeless images and straightforward booking. We plan sessions remotely, travel to your city, and deliver edited galleries ready to share and print.",
-    sections: [
-      {
-        heading: "Wedding photographer Canada",
-        paragraphs: [
-          "We photograph weddings in Toronto, Vancouver, Montreal, Calgary, Ottawa, and across Canada. From vineyard ceremonies to urban loft receptions, our approach stays unobtrusive while capturing every meaningful moment.",
-        ],
-      },
-      {
-        heading: "Portrait photography for Canadian clients",
-        paragraphs: [
-          "Professional portrait photography in Canada includes family sessions, personal branding, and business headshots. Tell us your location and style — we recommend the best season, light, and setting for your goals.",
-        ],
-        bullets: [
-          "Outdoor natural light portraits",
-          "Studio-style headshots for teams",
-          "Graduation and milestone sessions",
-        ],
-      },
-      {
-        heading: "Simple booking from anywhere in Canada",
-        paragraphs: [
-          "Submit an inquiry through our booking form or WhatsApp. We confirm availability in your time zone, provide a clear quote, and coordinate travel logistics so your session or wedding day runs smoothly.",
-        ],
-      },
-    ],
-    services: [
-      { title: "Weddings", description: "Coverage across Canadian provinces and cities." },
-      { title: "Portraits", description: "Families, professionals, and creative sessions." },
-      { title: "Corporate events", description: "Conferences, galas, and brand activations." },
-    ],
-  },
-  {
     path: "/wedding-photographer-us",
     metaTitle: "Wedding Photographer USA",
     metaDescription:
@@ -175,35 +124,35 @@ export const SEO_LANDING_PAGES: SeoLandingPageData[] = [
     ],
   },
   {
-    path: "/portrait-photographer-canada",
-    metaTitle: "Portrait Photographer Canada",
+    path: "/portrait-photographer-us",
+    metaTitle: "Portrait Photographer USA",
     metaDescription:
-      "Professional portrait photographer in Canada. Headshots, family, and personal branding sessions. Remote booking with Innocent Photos.",
+      "Professional portrait photographer in the USA. Headshots, family, and personal branding sessions. Book Innocent Photos.",
     keywords: [
-      "portrait photographer Canada",
-      "professional portrait photography Canada",
+      "portrait photographer USA",
+      "professional portrait photography USA",
       "business headshots photographer USA",
       "portrait photography",
-      "photographer for hire USA Canada",
+      "photographer for hire USA",
     ],
-    heroTitle: "Portrait Photographer in Canada",
+    heroTitle: "Portrait Photographer in the USA",
     heroSubtitle:
-      "Natural light portraits, business headshots, and family sessions for clients across Canada.",
+      "Natural light portraits, business headshots, and family sessions for clients across the United States.",
     heroImage: PUBLIC_IMAGES.portrait2,
-    heroImageAlt: "Professional portrait photography Canada — studio and outdoor",
+    heroImageAlt: "Professional portrait photography USA — studio and outdoor",
     intro:
-      "Whether you need updated headshots for your team in Toronto or a family session in Vancouver, Innocent Photos delivers polished portrait photography with a relaxed, guided experience and fast turnaround.",
+      "Whether you need updated headshots for your team in New York or a family session in Atlanta, Innocent Photos delivers polished portrait photography with a relaxed, guided experience and fast turnaround.",
     sections: [
       {
         heading: "Business headshots and personal branding",
         paragraphs: [
-          "Canadian professionals trust us for consistent headshots that work across LinkedIn, company websites, and press kits. We direct posing naturally so you look confident, not stiff.",
+          "US professionals trust us for consistent headshots that work across LinkedIn, company websites, and press kits. We direct posing naturally so you look confident, not stiff.",
         ],
       },
       {
         heading: "Family and lifestyle portraits",
         paragraphs: [
-          "Portrait photography in Canada shines in every season. We plan sessions around golden hour, weather backups, and locations that reflect your personality — parks, urban streets, or meaningful private spots.",
+          "Portrait photography across the USA shines in every season. We plan sessions around golden hour, weather backups, and locations that reflect your personality — parks, urban streets, or meaningful private spots.",
         ],
         bullets: [
           "Individuals and couples",
@@ -212,7 +161,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageData[] = [
         ],
       },
       {
-        heading: "Book from anywhere in Canada",
+        heading: "Book from anywhere in the USA",
         paragraphs: [
           "Remote planning makes booking simple. Share your city, preferred dates, and how you will use the images. We confirm travel, deliver a quote, and send your gallery digitally when editing is complete.",
         ],
@@ -225,36 +174,36 @@ export const SEO_LANDING_PAGES: SeoLandingPageData[] = [
     ],
   },
   {
-    path: "/event-photographer-us-canada",
-    metaTitle: "Event Photographer US & Canada",
+    path: "/event-photographer-us",
+    metaTitle: "Event Photographer USA",
     metaDescription:
-      "Corporate event, conference, and private celebration photography in the US and Canada. Innocent Photos — book event coverage.",
+      "Corporate event, conference, and private celebration photography across the USA. Innocent Photos — book event coverage.",
     keywords: [
       "event photographer USA",
-      "corporate event photography Canada",
-      "conference photographer North America",
+      "corporate event photography USA",
+      "conference photographer USA",
       "event photography",
       "travel photographer available worldwide",
       "international photographer",
     ],
-    heroTitle: "Event Photographer — US & Canada",
+    heroTitle: "Event Photographer in the USA",
     heroSubtitle:
       "Corporate conferences, galas, graduations, and private celebrations photographed with discretion and speed.",
     heroImage: PUBLIC_IMAGES.event1,
-    heroImageAlt: "Event photographer USA and Canada — corporate and private events",
+    heroImageAlt: "Event photographer USA — corporate and private events",
     intro:
-      "Events move fast. Innocent Photos provides reliable event photography across the United States and Canada — capturing keynote speakers, candid networking, and milestone moments your team can use for marketing and memories.",
+      "Events move fast. Innocent Photos provides reliable event photography across the United States — capturing keynote speakers, candid networking, and milestone moments your team can use for marketing and memories.",
     sections: [
       {
-        heading: "Corporate event photography in Canada",
+        heading: "Corporate event photography",
         paragraphs: [
-          "From Toronto tech conferences to Vancouver product launches, we deliver edited images suitable for social media, annual reports, and internal communications. Discrete coverage keeps your event flowing naturally.",
+          "From tech conferences to product launches, we deliver edited images suitable for social media, annual reports, and internal communications. Discrete coverage keeps your event flowing naturally.",
         ],
       },
       {
-        heading: "Conference and gala coverage in the USA",
+        heading: "Conference and gala coverage",
         paragraphs: [
-          "US clients hire us for multi-room conferences, award ceremonies, and brand activations. We coordinate shot lists with your team and deliver galleries on an agreed timeline.",
+          "Clients across the USA hire us for multi-room conferences, award ceremonies, and brand activations. We coordinate shot lists with your team and deliver galleries on an agreed timeline.",
         ],
         bullets: [
           "Keynote and panel documentation",
@@ -265,7 +214,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageData[] = [
       {
         heading: "Travel photographer available worldwide",
         paragraphs: [
-          "Need coverage beyond North America? We travel for international events and destination celebrations. Share your venue, schedule, and deliverable needs — we build a coverage plan that fits.",
+          "Need coverage beyond the United States? We travel for international events and destination celebrations. Share your venue, schedule, and deliverable needs — we build a coverage plan that fits.",
         ],
       },
     ],

@@ -21,13 +21,12 @@ export const BUSINESS = {
     { lead: "Creating Timeless ", accent: "Memories.", direction: "ltr" as const },
   ] as const,
   heroSubheadline:
-    "Professional wedding, portrait, and event photography for clients in the United States, Canada, and worldwide — with travel shoots from Kigali to North America.",
+    "Professional wedding, portrait, and event photography for clients across the USA — with travel shoots nationwide and worldwide.",
   internationalTagline:
-    "Professional photographer serving US and Canada clients remotely, with on-location travel shoots worldwide.",
+    "Professional photographer serving clients across the USA remotely, with on-location travel shoots nationwide and worldwide.",
   serviceAreas: [
     { type: "city" as const, name: "Kigali", country: "Rwanda" },
     { type: "country" as const, name: "United States" },
-    { type: "country" as const, name: "Canada" },
   ],
 } as const;
 

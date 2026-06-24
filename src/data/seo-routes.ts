@@ -17,10 +17,9 @@ export const INDEXABLE_ROUTES: SitemapEntry[] = [
   { path: "/faq", priority: 0.75, changeFrequency: "monthly" },
   { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
   { path: "/photography/us", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/photography/canada", priority: 0.85, changeFrequency: "monthly" },
   { path: "/wedding-photographer-us", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/portrait-photographer-canada", priority: 0.85, changeFrequency: "monthly" },
-  { path: "/event-photographer-us-canada", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/portrait-photographer-us", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/event-photographer-us", priority: 0.85, changeFrequency: "monthly" },
   ...BLOG_POSTS.map((post) => ({
     path: `/blog/${post.slug}`,
     priority: 0.65,

@@ -16,19 +16,16 @@ export const SEO_KEYWORDS = [
   "photography",
   "wedding photography",
   "wedding photographer USA",
-  "wedding photographer Canada",
   "portrait photographer USA",
-  "portrait photographer Canada",
   "event photographer USA",
-  "corporate event photography Canada",
   "destination wedding photographer",
   "destination photographer Africa",
   "international photographer",
-  "photographer for hire USA Canada",
+  "photographer for hire USA",
   "travel photographer worldwide",
   "affordable wedding photographer USA",
   "business headshots photographer USA",
-  "conference photographer North America",
+  "conference photographer USA",
   "Kigali photographer",
   "Tallahassee photographer",
   "Florida photography",
@@ -142,7 +139,6 @@ function areaServedSchema() {
     { "@type": "City", name: "Kigali", containedInPlace: { "@type": "Country", name: "Rwanda" } },
     { "@type": "City", name: "Tallahassee", containedInPlace: { "@type": "State", name: "Florida" } },
     { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "Canada" },
   ];
 }
 
@@ -312,7 +308,7 @@ export function portfolioGalleryJsonLd() {
     "@type": "ImageGallery",
     name: `${BUSINESS.name} Portfolio`,
     description:
-      "Wedding, portrait, family, event, sports, and lifestyle photography by Innocent Photos for US, Canada, and international clients.",
+      "Wedding, portrait, family, event, sports, and lifestyle photography by Innocent Photos for clients across the USA.",
     url: portfolioUrl,
     author: { "@id": `${BUSINESS.siteUrl}/#photographer` },
     publisher: { "@id": `${BUSINESS.siteUrl}/#business` },

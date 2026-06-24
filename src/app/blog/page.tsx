@@ -9,11 +9,11 @@ import { IMAGE_SIZES } from "@/lib/images";
 export const metadata: Metadata = createMetadata({
   title: "Photography Blog",
   description:
-    "Tips on choosing a wedding photographer in the USA, portrait styles in Canada, and destination wedding planning from Innocent Photos.",
+    "Tips on choosing a wedding photographer in the USA, portrait styles, and destination wedding planning from Innocent Photos.",
   path: "/blog",
   keywords: [
     "wedding photography tips",
-    "portrait photography Canada",
+    "portrait photography USA",
     "destination wedding guide",
   ],
 });
@@ -23,7 +23,7 @@ export default function BlogIndexPage() {
     <>
       <PageHero
         title="Photography Blog"
-        subtitle="Guides for couples and clients in the United States, Canada, and beyond."
+        subtitle="Guides for couples and clients across the USA."
       />
       <section className="section-padding section-bg-light">
         <div className="container-page">

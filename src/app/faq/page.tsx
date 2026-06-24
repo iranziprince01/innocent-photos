@@ -7,12 +7,11 @@ import { breadcrumbJsonLd, createMetadata, faqJsonLd } from "@/lib/seo";
 export const metadata: Metadata = createMetadata({
   title: "FAQ",
   description:
-    "Frequently asked questions about booking Innocent Photos for weddings, portraits, and events in the USA, Canada, and worldwide.",
+    "Frequently asked questions about booking Innocent Photos for weddings, portraits, and events across the USA.",
   path: "/faq",
   keywords: [
     "wedding photographer FAQ",
     "book photographer USA",
-    "photography Canada booking",
     "destination wedding photographer",
   ],
 });
@@ -39,7 +38,7 @@ export default function FaqPage() {
       <section className="section-padding section-bg-light">
         <div className="container-page mx-auto max-w-3xl">
           <p className="body-text text-warm-gray">
-            Planning photography from the United States, Canada, or abroad? These answers cover
+            Planning photography across the USA or abroad? These answers cover
             how we work with international and destination clients. Still have questions?{" "}
             <Link href="/contact" className="font-medium text-gold hover:underline">
               Contact us

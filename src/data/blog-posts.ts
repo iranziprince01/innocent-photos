@@ -59,25 +59,25 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
-    slug: "best-portrait-photography-styles-canada",
-    title: "Best Portrait Photography Styles in Canada",
+    slug: "best-portrait-photography-styles-usa",
+    title: "Best Portrait Photography Styles in the USA",
     description:
-      "From natural light outdoor sessions to studio headshots — portrait styles Canadian clients love and how to choose the right look.",
+      "From natural light outdoor sessions to studio headshots — portrait styles US clients love and how to choose the right look.",
     publishedAt: "2026-06-05",
     readTime: "5 min read",
     heroImage: "/portraits.jpg",
-    heroImageAlt: "Professional portrait photography session in natural light",
+    heroImageAlt: "Professional portrait photography session in natural light across the USA",
     sections: [
       {
         heading: "Natural light outdoor portraits",
         paragraphs: [
-          "Canada’s seasons offer dramatic backdrops — golden summer evenings, snowy winters, and vibrant fall colour. Natural light portraits feel authentic and timeless, ideal for families, couples, and personal branding.",
+          "Seasons across the USA offer dramatic backdrops — golden summer evenings, coastal light, and vibrant fall colour. Natural light portraits feel authentic and timeless, ideal for families, couples, and personal branding.",
         ],
       },
       {
         heading: "Studio and headshot portraits",
         paragraphs: [
-          "Professional portrait photography in Canada often includes clean studio or office setups for business headshots. Consistent lighting, neutral backgrounds, and confident posing help teams look polished on LinkedIn and company sites.",
+          "Professional portrait photography in the USA often includes clean studio or office setups for business headshots. Consistent lighting, neutral backgrounds, and confident posing help teams look polished on LinkedIn and company sites.",
         ],
         bullets: [
           "Classic head-and-shoulders framing",
@@ -94,7 +94,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: "Book a portrait session",
         paragraphs: [
-          "Innocent Photos offers portrait sessions for Canadian clients with remote planning and travel coordination. Packages start at $250. Tell us your city and vision — we will recommend the best style for your goals.",
+          "Innocent Photos offers portrait sessions for clients across the USA with remote planning and travel coordination. Packages start at $250. Tell us your city and vision — we will recommend the best style for your goals.",
         ],
       },
     ],
@@ -113,7 +113,7 @@ export const BLOG_POSTS: BlogPost[] = [
         heading: "Why hire a destination wedding photographer",
         paragraphs: [
           "Destination weddings bring unique logistics — unfamiliar venues, tight timelines, and guests arriving from multiple countries. An experienced destination photographer anticipates those challenges and keeps coverage calm and complete.",
-          "Whether your celebration moves from Africa to the US, or you are hosting guests in Canada, a photographer who travels internationally understands cultural moments worth preserving.",
+          "Whether your celebration moves from Africa to the US or you are hosting guests from abroad, a photographer who travels internationally understands cultural moments worth preserving.",
         ],
       },
       {

@@ -74,7 +74,7 @@ export function Footer() {
             <div className="mt-5 max-w-sm border-t border-white/20 pt-5">
               <p className="text-sm leading-relaxed text-white/85">
                 Wedding, portrait, family, and event photography crafted with care.
-                Serving clients in the United States, Canada, and worldwide.
+                Serving clients across the USA and worldwide.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/85">
                 <Link

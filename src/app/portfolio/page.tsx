@@ -7,9 +7,9 @@ import { images } from "@/data/images";
 export const metadata: Metadata = createMetadata({
   title: "Portfolio",
   description:
-    "Wedding, portrait, family, and event photography portfolio by Innocent Photos — serving clients in the USA, Canada, and worldwide.",
+    "Wedding, portrait, family, and event photography portfolio by Innocent Photos — serving clients across the USA.",
   path: "/portfolio",
-  keywords: ["photography portfolio", "wedding photographer USA", "portrait photographer Canada"],
+  keywords: ["photography portfolio", "wedding photographer USA", "portrait photographer USA"],
 });
 
 export default function PortfolioPage() {

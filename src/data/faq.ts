@@ -7,12 +7,12 @@ export const GENERAL_FAQ: FaqItem[] = [
   {
     question: "Do you travel for photography sessions?",
     answer:
-      "Yes. Innocent Photos travels across the United States, Canada, and internationally for weddings, portraits, and events. Based in Tallahassee, Florida, with roots in Kigali, Rwanda, we plan travel shoots worldwide.",
+      "Yes. Innocent Photos travels across the United States and internationally for weddings, portraits, and events. Based in Tallahassee, Florida, with roots in Kigali, Rwanda, we plan travel shoots nationwide and worldwide.",
   },
   {
-    question: "How do I book a session from the US or Canada?",
+    question: "How do I book a session from the USA?",
     answer:
-      "Use the booking form or WhatsApp on our website. Share your date, city, session type, and vision. We confirm availability, deliver a clear quote, and guide you through planning — whether you are local or booking from abroad.",
+      "Use the booking form or WhatsApp on our website. Share your date, city, session type, and vision. We confirm availability, deliver a clear quote, and guide you through planning — whether you are local or booking from another state.",
   },
   {
     question: "What types of photography do you offer?",
@@ -22,12 +22,12 @@ export const GENERAL_FAQ: FaqItem[] = [
   {
     question: "How far in advance should I book a wedding photographer?",
     answer:
-      "For US and Canada weddings, book 9–12 months ahead when possible. Peak seasons fill quickly. Last-minute availability may exist — contact us with your date and we will respond within 24 hours.",
+      "For USA weddings, book 9–12 months ahead when possible. Peak seasons fill quickly. Last-minute availability may exist — contact us with your date and we will respond within 24 hours.",
   },
   {
     question: "Do you offer destination wedding photography from Africa to the US?",
     answer:
-      "Yes. We specialize in destination weddings for couples planning celebrations in the United States, Canada, or abroad. We coordinate travel, timelines, and shot lists so your day runs smoothly across time zones.",
+      "Yes. We specialize in destination weddings for couples planning celebrations in the United States or abroad. We coordinate travel, timelines, and shot lists so your day runs smoothly across time zones.",
   },
   {
     question: "Are you an affordable wedding photographer in the USA?",
@@ -49,17 +49,4 @@ export const US_FAQ: FaqItem[] = [
   },
 ];
 
-export const CANADA_FAQ: FaqItem[] = [
-  {
-    question: "Do you photograph weddings and portraits in Canada?",
-    answer:
-      "Yes. We serve clients in Toronto, Vancouver, Montreal, Calgary, Ottawa, and across Canada for weddings, portraits, and corporate events. Remote planning and travel coordination are included.",
-  },
-  {
-    question: "How does booking work for Canadian clients?",
-    answer:
-      "Canadian clients book the same way as US clients — online inquiry or WhatsApp. We confirm dates in your time zone, provide USD-based quotes, and deliver galleries digitally with full usage rights as agreed.",
-  },
-];
-
-export const ALL_FAQ: FaqItem[] = [...GENERAL_FAQ, ...US_FAQ, ...CANADA_FAQ];
+export const ALL_FAQ: FaqItem[] = [...GENERAL_FAQ, ...US_FAQ];

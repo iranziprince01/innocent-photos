@@ -36,6 +36,26 @@ const nextConfig: NextConfig = {
         destination: "/:path+",
         permanent: true,
       },
+      {
+        source: "/photography/canada",
+        destination: "/photography/us",
+        permanent: true,
+      },
+      {
+        source: "/portrait-photographer-canada",
+        destination: "/portrait-photographer-us",
+        permanent: true,
+      },
+      {
+        source: "/event-photographer-us-canada",
+        destination: "/event-photographer-us",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-portrait-photography-styles-canada",
+        destination: "/blog/best-portrait-photography-styles-usa",
+        permanent: true,
+      },
     ];
   },
   async headers() {
